@@ -1,4 +1,3 @@
-
 PixiGame.GameScene = function() {
     this.w = window.innerWidth;
     this.h = window.innerHeight;
@@ -23,7 +22,7 @@ PixiGame.GameScene.prototype.setup = function() {
     };
 }
 PixiGame.GameScene.prototype.addBoid = function() {
-    var index = this.NUM_BOIDS;    
+    var index = this.NUM_BOIDS;
     this.boids[index] = new Boid(); //create new BOID
     this.boids[index].setBounds(this.w, this.h);
     this.boids[index].position.x = this.w * Math.random();
@@ -39,16 +38,16 @@ PixiGame.GameScene.prototype.addBoid = function() {
 PixiGame.GameScene.prototype.update = function() {
     this.time += 0.1;
     for (var i = 0; i < this.NUM_BOIDS; i++) {
-        if (i==0){
+        if (i == 0) {
             this.boids[0].position.x = document.posx;
             this.boids[0].position.y = document.posy;
-        }else{
+        } else {
             this.boids[i].pursue(this.boids[0]);
         }
         this.boids[i].flock(this.boids); //set the flock        
         this.boids[i].update(); //calculate new position
         this.flockers[i].setPosition(this.boids[i].position); //copy position from boid to Pboid        
-        this.flockers[i].update(this.time);  //update
+        this.flockers[i].update(this.time); //update
     };
 }
 

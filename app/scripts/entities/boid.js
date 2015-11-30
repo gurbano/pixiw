@@ -14,7 +14,11 @@ PixiGame.PBoid.prototype.setup = function() {
     //this.beginFill(0xFFFFFF);
     //this.drawCircle(0, 0, 2);
     //this.endFill();
-    this.addChild(new PIXI.Text(letters[this.index],{font : '20px Arial', fill : 0xff1010, align : 'center'}));
+    this.addChild(new PIXI.Text(letters[this.index], {
+        font: '20px Arial',
+        fill: 0xff1010,
+        align: 'center'
+    }));
 }
 
 PixiGame.PBoid.prototype.update = function(time) {
@@ -31,6 +35,6 @@ PixiGame.PBoid.prototype.destroy = function() {
 }
 
 
-var rand= function (min, max) {
+var rand = function(min, max) {
     return Math.floor(Math.random() * max) + min;
 }
