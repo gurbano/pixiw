@@ -23,7 +23,9 @@ module.exports = function(grunt) {
     // Load grunt tasks automatically
     require('load-grunt-tasks')(grunt);
 
+    grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-contrib-concat');
+
 
     // Configurable paths
     var config = {
@@ -31,13 +33,15 @@ module.exports = function(grunt) {
         dist: 'dist'
     };
 
-    var srcFiles = [
+    var srcFiles = [        
         '<%= config.app %>/scripts/intro.js',
         '<%= config.app %>/scripts/controller/game-loop-controller.js',
         '<%= config.app %>/scripts/controller/scene-controller.js',
         '<%= config.app %>/scripts/scene/main-menu-scene.js',
         '<%= config.app %>/scripts/scene/game-scene.js',
-        '<%= config.app %>/scripts/outro.js'
+        '<%= config.app %>/scripts/outro.js',
+        '<%= config.app %>/scripts/entities/boid.js',
+
     ];
 
     // Define the configuration for all the tasks

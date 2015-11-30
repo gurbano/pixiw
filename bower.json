@@ -5,6 +5,10 @@
     "howler": "~1.1.25",
     "gsap": "~1.16.0",
     "modernizr": "~2.8.2",
-    "pixi": "~3.0.0"
+    "pixi": "~3.0.0",
+    "jquery": "~2.1.4"
+  },
+  "devDependencies": {
+    "boid": "~0.1.0"
   }
 }
