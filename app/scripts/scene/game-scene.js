@@ -4,7 +4,7 @@ PixiGame.GameScene = function() {
     this.time = 0;
     this.mouse = new Boid(); //https://www.npmjs.com/package/boid
     this.NUM_BOIDS = 0;
-    this.START_BOIDS = 15;
+    this.START_BOIDS = 70;
     this.flockers = []; //Pboids
     this.boids = []; //Boids
 

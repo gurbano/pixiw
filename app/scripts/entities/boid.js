@@ -14,7 +14,7 @@ PixiGame.PBoid.prototype.setup = function() {
     //this.beginFill(0xFFFFFF);
     //this.drawCircle(0, 0, 2);
     //this.endFill();
-    this.addChild(new PIXI.Text(letters[this.index], {
+    this.addChild(new PIXI.Text(letters[this.index % letters.length], {
         font: '20px Arial',
         fill: 0xff1010,
         align: 'center'
