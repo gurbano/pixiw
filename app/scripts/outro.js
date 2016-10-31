@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     PixiGame.stage = new PIXI.Container();
 
     // 
-    //PixiGame.sceneController = new PixiGame.SceneController(PixiGame.MainMenuScene);
-    PixiGame.sceneController = new PixiGame.SceneController(PixiGame.GameScene);
+    PixiGame.sceneController = new PixiGame.SceneController(PixiGame.MainMenuScene);
+    //PixiGame.sceneController = new PixiGame.SceneController(PixiGame.GameScene);
 
     //
     PixiGame.gameLoopController = new PixiGame.GameLoopController();

@@ -21,9 +21,20 @@ PixiGame.GameScene.prototype.setup = function() {
         this.addBoid();
     };
 }
+
+var configureBoid = function (boid) {    
+    // mass - affects the steering force 
+    boid.mass = 1; //1
+    // maximum speed 
+    boid.maxSpeed = 1; //10
+    // maximum force to apply to steering 
+    boid.maxForce = (boid.maxSpeed/10); //speed/10
+}
+
 PixiGame.GameScene.prototype.addBoid = function() {
     var index = this.NUM_BOIDS;
     this.boids[index] = new Boid(); //create new BOID
+    configureBoid(this.boids[index]);
     this.boids[index].setBounds(this.w, this.h);
     this.boids[index].position.x = this.w * Math.random();
     this.boids[index].position.y = this.h * Math.random();
@@ -36,7 +47,7 @@ PixiGame.GameScene.prototype.addBoid = function() {
 
 
 PixiGame.GameScene.prototype.update = function() {
-    this.time += 0.1;
+    this.time += 1;
     for (var i = 0; i < this.NUM_BOIDS; i++) {
         if (i == 0) {
             this.boids[0].position.x = document.posx;
